@@ -183,3 +183,20 @@ $('.bt-resumo-folha').click(function () {
         $('.comprovantes-bts').show();
     }, 1500);
 })
+
+
+var customSelect = document.querySelector('.custom-select');
+    var selectSelected = customSelect.querySelector('.select-selected');
+    var selectItems = customSelect.querySelector('.select-items');
+    var options = selectItems.querySelectorAll('div');
+
+    selectSelected.addEventListener('click', function() {
+        selectItems.classList.toggle('open');
+    });
+
+    options.forEach(function(option) {
+        option.addEventListener('click', function() {
+            selectSelected.textContent = this.textContent;
+            selectItems.classList.remove('open');
+        });
+    });

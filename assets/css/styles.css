@@ -452,3 +452,59 @@ table select.errado {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+
+.div-tabela
+{
+  background-color: #597994;
+  color: white;
+  padding: 1px;
+  border-radius: 39px;
+  height: 902px;
+border: 2px solid #bfccdc;}
+
+.div-tabela tbody tr:nth-child(even) {
+  background-color: #e7eff7;
+}
+
+.cor-sim{
+  background-color: #e7eff7 !important;
+  height: 100% !important;
+}
+
+  .table.estilo-tabela {
+    background-color: white;
+    color: #253453;
+    padding: 5px;
+    height: 79%;
+    font-size: 23px;
+  }
+
+  .table > thead {
+    vertical-align: bottom;
+    background-color: #bfccdc;
+    font-size: 25px;
+    color: #253453 !important;
+  }
+
+  .titulo-tabela{
+    color: #253453 !important;
+  }
+
+  .btn.estilo-menu {
+    background-color: #e6f4ff;
+    padding: 22px;
+    font-size: 25px;
+    margin: 16px;
+    border: 4px solid #253453;
+    color: #253453;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+
+  .btn.estilo-menu:hover{
+    color: #e6f4ff;
+    background-color: #253453;
+  }
