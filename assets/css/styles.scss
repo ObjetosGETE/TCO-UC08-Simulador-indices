@@ -1,0 +1,523 @@
+    $primary-blue: #80a8cd;
+    $hover-blue: #e6f4ff;
+    $dark-blue: #20304f;
+
+    * {
+        font-family: 'Segoe UI';
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #3f4d68;
+    }
+
+    h2 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    p {
+        line-height: 30px;
+    }
+
+    .wrapper {
+        width: 1920px;
+        height: 1080px;
+        overflow-x: hidden;
+        position: absolute;
+        top: calc(50% - (1080px / 2));
+        left: calc(50% - (1920px / 2));
+    }
+
+    .tela {
+        position: absolute;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        background-image: url('../img/01-interior/BG_interno.png');
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 150px 250px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    p.index {
+        background-color: #e8eff5;
+        border: 1px solid #20304f;
+        border-radius: 50px;
+        padding: 10px 50px;
+        position: absolute;
+        top: 50px;
+        left: 250px;
+        color: #597994;
+        font-weight: 600;
+    }
+
+    .tela-1 {
+        display: block;
+        background-image: url('../img/capa/capa_BG.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        position: relative;
+        padding: 1px 50px;
+
+        h1.title {
+            background-color: white;
+            box-shadow: 9px 10px #597994;
+            width: fit-content;
+            padding: 10px 50px 10px 150px;
+            padding-left: 150px;
+            margin-left: -90px;
+            padding-right: 50px;
+            color: #597994;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+
+        .btn-iniciar {
+            position: absolute;
+            right: 400px;
+            top: 575px;
+            transform: scale(1.3);
+        }
+
+        .titulo {
+            position: absolute;
+            right: 50px;
+            top: 250px;
+        }
+
+    }
+
+    .tela-3 {
+
+        .ui-msg-escura {
+            width: 80%;
+        }
+    }
+
+    .ui-msg {
+        background-color: #e8eff5;
+        border-radius: 15px;
+        border: 2px solid #20304f;
+        display: block;
+        position: relative;
+        padding: 20px 40px;
+        color: #597994;
+        font-size: 24px;
+
+        h3 {
+            margin: 0;
+            color: #007798;
+        }
+
+        .btn-proximo {
+            position: absolute;
+            bottom: 20px;
+            right: 25px;
+        }
+    }
+
+    .tela-2 .ui-msg,
+    .tela-final .ui-msg {
+        width: 800px;
+        height: 600px;
+        padding: 40px;
+    }
+
+    .ui-msg-escura {
+        background: rgb(102, 113, 134);
+        background: linear-gradient(105deg, rgba(102, 113, 134, 1) 0%, rgba(94, 168, 189, 1) 100%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-size: 24px;
+        margin: 50px auto;
+        padding: 20px 40px;
+
+    }
+
+    .menu-esq {
+        position: absolute;
+        height: 100%;
+        width: 256px;
+        left: -100px;
+        top: 0;
+        background-image: url('../img/01-interior/aba_lateral.png');
+        background-size: 100% 100%;
+        transition-duration: .8s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .bt-blip {
+            margin: 30px 0;
+            margin-left: auto;
+            margin-right: 60px;
+        }
+
+        button {
+            height: 140px;
+            width: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-left: 400px;
+            background-color: transparent;
+            border: none;
+            display: none;
+
+            &.inativo {
+                pointer-events: none;
+                opacity: .7;
+            }
+        }
+
+        &.ativo {
+            left: 0;
+        }
+    }
+
+    .tela-2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+
+    button {
+        cursor: pointer;
+    }
+
+    .ui-btn {
+        background: linear-gradient(180deg, rgba(134, 176, 214, 1) 0%, rgba(93, 127, 152, 1) 100%);
+        box-shadow: 7px 7px $dark-blue;
+        font-size: 24px;
+        padding: 15px 40px;
+        border-radius: 14px;
+        color: white;
+        text-transform: uppercase;
+        border: 3px solid $dark-blue;
+        margin: 15px;
+        font-weight: 700;
+        width: fit-content;
+
+        &:hover {
+            background: $hover-blue;
+            color: $dark-blue;
+        }
+
+        &.inativo {
+            opacity: .7;
+            pointer-events: none;
+        }
+
+        &.checar-tabelas {
+            display: block;
+            margin: 20px auto;
+        }
+
+        &.clicado {
+            background: linear-gradient(180deg, rgb(128, 202, 92) 0%, rgb(82, 155, 37) 100%);
+        }
+    }
+
+    .ui-dados-empresa {
+        padding: 50px;
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 300px;
+            width: 300px;
+            background-image: url('../img/img_seta_02.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .ui-msg {
+            width: fit-content;
+            display: block;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+
+            &::before {
+                content: '';
+                height: 200px;
+                width: 200px;
+                background-image: url('../img/img_seta_01.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                left: -160px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+
+        .ui-msg p {
+            margin-left: 15px;
+            font-size: 24px;
+        }
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 30px;
+        right: 100px;
+    }
+
+    .pop-up {
+        position: absolute;
+        z-index: 10;
+        background-image: url('../img/01-interior/BG_interno.png');
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .tabela {
+        margin: 20px;
+        max-width: 100%;
+        max-height: 480px;
+    }
+
+    .flex-vertical {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .pop-up {
+        padding: 50px 35px;
+
+        p {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+    }
+
+    .pop-up .flex {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .tabela {
+        max-width: 1400px;
+    }
+
+ 
+    .sub-header th {
+        text-align: left;
+    }
+
+    table {
+        margin: 15px auto;
+        width: 1400px;
+        max-width: 100%;
+
+        td,
+        th {
+            padding: 8px;
+        }
+
+        td {
+            border: 2px solid #cecece;
+            background-color: white;
+        }
+
+        th {
+            background-color: #3f4d68;
+            border: 2px solid #cecece;
+            color: white;
+            text-align: center;
+        }
+
+        .select-container {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 52px;
+            border: 0;
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 0;
+            
+
+            &.correto {
+                background: rgb(128, 202, 92);
+            }
+
+            &.errado {
+                background-color: rgb(220, 80, 80);
+            }
+        }
+    }
+
+    .modal-header {
+        background: rgb(102, 113, 134);
+        color: white;
+        justify-content: center;
+    }
+
+    .modal-body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e5eeff;
+
+        img {
+            height: 180px;
+            margin-right: 20px;
+        }
+
+        .text p {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            line-height: 26px;
+        }
+
+    }
+
+    .modal-footer {
+        justify-content: center;
+        background-color: #e5eeff;
+        border-top: none;
+
+        .ui-btn {
+            font-size: 20px;
+            padding: 8px 42px;
+        }
+    }
+
+   
+
+    /**/
+    /** vire o celular **/
+    /**/
+
+    .modo-smart {
+        display: none;
+        position: absolute;
+    }
+
+    .p-paisagem {
+        color: white;
+        text-align: center;
+    }
+
+    .img-paisagem {
+        max-width: 70% !important;
+        height: auto;
+        display: block;
+    }
+
+    @media only screen and (orientation: portrait) {
+        .modo-smart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #7c88e7;
+            z-index: 999;
+        }
+    }
+    .preloaded-images {
+        display: none;
+        position: absolute;
+    }
+    @media (max-width: 1400px) {
+        p.index {
+            top: 30px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .tela {
+            padding: 70px 40px 70px 160px;
+        }
+
+        .tela-1 {
+            padding: 1px;
+
+            .titulo {
+                transform: scale(.8);
+                top: 100px;
+                right: 0;
+            }
+
+            .btn-iniciar {
+                right: 200px;
+                top: 360px;
+            }
+        }
+
+        .ui-msg-escura {
+            font-size: 24px;
+            line-height: 1.5rem;
+            margin: 20px auto;
+
+            p {
+                margin-top: 0;
+            }
+        }
+
+    
+        th {
+            font-size: 18px;
+        }
+        td {
+            font-size: 20px;
+        }
+    }

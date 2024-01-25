@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Análise de Índices</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- força o usuário a virar a tela do celular -->
+    <div class="preloaded-images">
+        <img src="assets/img/bts/bt_1o_passo_hv.png" alt="">
+        <img src="assets/img/bts/bt_2o_passo_hv.png" alt="">
+        <img src="assets/img/bts/bt_3o_passo_hv.png" alt="">
+        <img src="assets/img/bts/bt_4o_passo_hv.png" alt="">
+        <img src="assets/img/bts/bt_1p_01_hv.png" alt="">
+        <img src="assets/img/bts/bt_1p_02_hv.png" alt="">
+        <img src="assets/img/bts/bt_2p_01_hv.png" alt="">
+        <img src="assets/img/bts/bt_2p_02_hv.png" alt="">
+        <img src="assets/img/bts/bt_3p_01_hv.png" alt="">
+        <img src="assets/img/bts/bt_4p_01_hv.png" alt="">
+        <img src="assets/img/bts/bt_4p_02_hv.png" alt="">
+    </div>
+    <div class="modo-smart">
+        <div class="text-center">
+            <p class="p-paisagem text-center">
+                <img src="assets/img/vire.gif" class="img-fluid img-paisagem d-inline-block"><br>
+                <strong>Por favor, gire o aparelho para o modo paisagem.</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="tela tela-1">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dadosAtivoCirculante">
+                Ativo
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dadosPassivo">
+                Passivo
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dadosDRE">
+                DRE
+            </button>
+
+            <h1 class="title">Curso Técnico em Contabilidade</h1>
+            <img src="assets/img/capa/capa_titulo.png" alt="Simulador de Folha de Pagamento" class="titulo">
+            <button class="btn-iniciar ui-btn">Iniciar</button>
+        </div>
+        <div class="tela tela-2">
+            <div class="menu-esq">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+            </div>
+            <div class="ui-msg">
+                <p>Olá, estudante! </p>
+                <p>Agora que você já fez a simulação do fluxo de caixa, precisará definir os indicadores financeiros e
+                    seus parâmetros, indicando a definição correta para cada um dos indicadores financeiros
+                    apresentados.
+                </p>
+                <button class="btn-proximo ui-btn">Avançar</button>
+            </div>
+        </div>
+
+        <!-- <div class="tela tela-final">
+            <div class="menu-esq">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
+            </div>
+            <div class="ui-msg">
+                <h2>Encerramento</h2>
+                <p>Nesta simulação, você teve a oportunidade de vivenciar o cálculo de uma folha de pagamento,
+                    realizando todos os procedimentos que esse processo envolve. </p>
+                <p>Foi uma oportunidade de ver na prática um pouco das rotinas trabalhistas, passando pelo cálculo dos
+                    proventos e descontos de um colaborador e pelo cálculo do pró-labore dos sócios. Também foi possível
+                    vivenciar a emissão de guias, DARFs e recibos pertinentes à folha de pagamento.</p>
+            </div>
+        </div> -->
+
+        <div class="pop-up pop-up-1" data-pop="1">
+            <table class="table minha-tabela">
+                <thead>
+                    <tr>
+                        <th scope="col">ÍNDICES/INDICADORES-FINANCEIROS</th>
+                        <th scope="col">DEFINIÇÃO DOS ÍNDICES</th>
+                        <th scope="col">INDICADORES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">Liquidez corrente =</td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="correto">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="correto">>1 é favorável</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                                <option value="errado">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">Liquidez Seca =</td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="correto">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="correto">>1 é favorável</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                                <option value="errado">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Prazo Médio de Recebimento(PMR) =</td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="correto">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="correto">Quanto MENOR melhor</option>
+                                <option value="errado">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Giro do Ativo (GA) =
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="correto">O indicador contábil que relaciona os ativos de uma companhia
+                                    com a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do
+                                    ativo é medir se uma empresa está utilizando devidamente o seu ativo (bens,
+                                    investimentos, estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                                <option value="correto">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Retorno sobre o investimento(ROI) =
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="correto">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                                <option value="correto">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Grau de endividamento =
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="correto">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="correto">Quanto MENOR melhor</option>
+                                <option value="errado">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Participação dos Capitais de Terceiros (PCT) =
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="correto">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="errado">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="correto">Quanto MENOR melhor</option>
+                                <option value="errado">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="col" class="estilo-coluna">
+                            Margem líquida (ML) =
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">Indicador que tem a capacidade de transformar o Ativo
+                                    Circulante(AC)e liquidar as dívidas do Passivo Circulante (PC) no curto prazo. Um
+                                    dos indicadores mais conhecidos para se analisar a capacidade de pagamento de uma
+                                    empresa.</option>
+                                <option value="errado">Indicador que tem a capacidade de utiizar o Ativo Circulante(AC)
+                                    sem considerar os estoques, para liquidar as dívidas do Passivo Circulante (PC).O
+                                    índice de liquidez seca é similar ao índice de liquidez corrente. A única diferença
+                                    é que ele exclui os estoques do ativo circulante da empresa, já que esses direitos
+                                    são menos realizáveis no curto prazo.</option>
+                                <option value="errado">O Indicador é o tempo médio, em dias, entre a venda feita e o
+                                    recebimento do dinheiro. Ou seja, é o tempo que a empresa vai demorar para receber o
+                                    dinheiro.</option>
+                                <option value="errado">O indicador contábil que relaciona os ativos de uma companhia com
+                                    a sua receita líquida. Em outras palavras, o objetivo de se calcular o giro do ativo
+                                    é medir se uma empresa está utilizando devidamente o seu ativo (bens, investimentos,
+                                    estoque etc.) </option>
+                                <option value="errado">Trata-se de um indicador gerencial que mostra qual o ganho
+                                    financeiro da empresa em cada investimento realizado.</option>
+                                <option value="errado">Indicador que mostra a saúde financeira de uma empresa. Ou seja,
+                                    basicamente, trata-se da relação entre o capital de terceiros, o capital próprio de
+                                    uma empresa e o resultado que ela através de sua operação. </option>
+                                <option value="errado">O Indicador que representa o percentual de recursos provindos de
+                                    fontes externas utilizado por uma empresa para a manutenção, continuidade e expansão
+                                    de suas atividades. </option>
+                                <option value="correto">O indicador financeiro que mostra a porcentagem de lucro em
+                                    relação às receitas de uma empresa. </option>
+                            </select>
+                        </td>
+                        <td scope="col" class="estilo-coluna" class="select-container">
+                            <select class="estilo-selecao form-select text-wrap">
+                                <option value=""></option>
+                                <option value="errado">>1 é favorável</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                                <option value="correto">Quanto MAIOR melhor</option>
+                                <option value="errado">>1 é desfavorável</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="ui-btn checar-tabelas">Conferir resultado</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="dadosAtivoCirculante" tabindex="-1" aria-labelledby="dadosAtivoCirculanteLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="dadosAtivoCirculanteLabel">Balanço patrimonial - ATIVO CIRCULANTE
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-4">
+                        <h1 class="text-center">EMPRESA: COMÉRCIO DE CALÇADOS PISADA LTDA</h1>
+                        <table class="table custom-table">
+                            <thead class="thead-dark custom-header">
+                                <tr>
+                                    <th scope="col" class="estilo-coluna">ATIVO</th>
+                                    <th scope="col">2022</th>
+                                    <th scope="col">2023</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ATIVO CIRCULANTE</td>
+                                    <td>R$ 364.460,00</td>
+                                    <td>R$ 625.175,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;DISPONIBILIDADES</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Caixa</td>
+                                    <td>R$ 122.500,00</td>
+                                    <td>R$ 247.675,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Bancos</td>
+                                    <td>R$ 22.500,00</td>
+                                    <td>R$ 15.200,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Aplicações de Liquidez Imediata - CP</td>
+                                    <td>R$ 100.000,00</td>
+                                    <td>R$ 232.475,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;DIREITOS REALIZÁVEIS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Clientes</td>
+                                    <td>R$ 241.600,00</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;(-) PCLD</td>
+                                    <td>R$ 34.250,00</td>
+                                    <td>R$ 192.700,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Impostos a Recuperar</td>
+                                    <td>R$ 28.650,00</td>
+                                    <td>R$ 185.900,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;ESTOQUES</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Sapatos Masculinos</td>
+                                    <td>R$ 207.710,00</td>
+                                    <td>R$ 184.800,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Embalagens</td>
+                                    <td>R$ 5.000,00</td>
+                                    <td>R$ 8.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>ATIVO NÃO-CIRCULANTE</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;REALIZÁVEL A LONGO PRAZO</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Empréstimos a Sócios</td>
+                                    <td>R$ 1.273.750,00</td>
+                                    <td>R$ 1.352.200,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Aplicações Financeiras - LP</td>
+                                    <td>R$ 5.000,00</td>
+                                    <td>R$ 8.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;INVESTIMENTOS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Participação em Controladas</td>
+                                    <td>R$ 840.500,00</td>
+                                    <td>R$ 840.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Participação em Coligadas</td>
+                                    <td>R$ 50.000,00</td>
+                                    <td>R$ 75.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;IMOBILIZADO</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Prédio</td>
+                                    <td>R$ 223.400,00</td>
+                                    <td>R$ 223.400,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Máq. e Equipamentos</td>
+                                    <td>R$ 78.600,00</td>
+                                    <td>R$ 138.600,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Terreno</td>
+                                    <td>R$ 80.000,00</td>
+                                    <td>R$ 80.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Móveis e Utensílios</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Veículos</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Softwares de Informática</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;(-) Depreciações Acumulada</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;INTANGÍVEL</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Marcas e Patentes</td>
+                                    <td>R$ 1.259.750,00</td>
+                                    <td>R$ 1.334.700,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Direitos Autorais</td>
+                                    <td>R$ 840.500,00</td>
+                                    <td>R$ 840.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Licenças (Softwares)</td>
+                                    <td>R$ 9.000,00</td>
+                                    <td>R$ 9.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL ATIVO</td>
+                                    <td>R$ 1.638.210,00</td>
+                                    <td>R$ 1.977.375,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dadosPassivo" tabindex="-1" aria-labelledby="dadosPassivoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="dadosPassivoLabel">Balanço patrimonial - PASSIVO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-4">
+                        <h1 class="text-center">EMPRESA: COMÉRCIO DE CALÇADOS PISADA LTDA</h1>
+
+                        <table class="table custom-table">
+                            <thead class="thead-dark custom-header">
+                                <tr>
+                                    <th scope="col">PASSIVO</th>
+                                    <th scope="col">2022</th>
+                                    <th scope="col">2023</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CIRCULANTE</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;CONTAS A PAGAR</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;JP Máquinas e Equip. - CP</td>
+                                    <td>R$ 102.500,00</td>
+                                    <td>R$ 47.400,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Fornecedor XY - CP</td>
+                                    <td>R$ 180.156,00</td>
+                                    <td>R$ 196.785,90</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Financiamento CP (12x)</td>
+                                    <td>R$ 310.005,00</td>
+                                    <td>R$ 271.640,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Energia Elétrica a Pagar</td>
+                                    <td>R$ 4.251,00</td>
+                                    <td>R$ 5.630,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Internet/Telefone a Pagar</td>
+                                    <td>R$ 1.100,00</td>
+                                    <td>R$ 3.640,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Abastecimento de Água a Pagar</td>
+                                    <td>R$ 650,00</td>
+                                    <td>R$ 1.205,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;OBRIGAÇÕES TRIBUTÁRIAS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;ICMS a Pagar</td>
+                                    <td>R$ 47.820,09</td>
+                                    <td>R$ 114.865,39</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;COFINS a Pagar</td>
+                                    <td>R$ 28.345,12</td>
+                                    <td>R$ 58.052,60</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;PIS a Pagar</td>
+                                    <td>R$ 11.811,67</td>
+                                    <td>R$ 31.085,36</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;IRPJ</td>
+                                    <td>R$ 2.789,48</td>
+                                    <td>R$ 6.617,25</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;CSLL</td>
+                                    <td>R$ 3.046,52</td>
+                                    <td>R$ 10.097,58</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;OBRIGAÇÕES TRABALHISTAS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Salários a Pagar</td>
+                                    <td>R$ 1
+                                        7.800,00</td>
+                                    <td>R$ 27.455,00</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Encargos Sociais a Pagar</td>
+                                    <td>R$ 12.500,00</td>
+                                    <td>R$ 19.505,00</td>
+                                </tr>
+                                <tr>
+                                    <td>NÃO-CIRCULANTE</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;Financiamento de Longo Prazo (36x)</td>
+                                    <td>R$ 690.444,91</td>
+                                    <td>R$ 943.000,71</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;Fornecedores de Longo Prazo</td>
+                                    <td>R$ 690.444,91</td>
+                                    <td>R$ 943.000,71</td>
+                                </tr>
+                                <tr>
+                                    <td>PATRIMÔNIO LÍQUIDO</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;CAPITAL SOCIAL</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Capital Subscrito</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;(-) Capital a Integralizar</td>
+                                    <td>R$ 283.483,00</td>
+                                    <td>R$ 365.753,00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;(-) Gastos com a Emissão de Ações</td>
+                                    <td>R$ 272.659,64</td>
+                                    <td>R$ 276.367,02</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;RESERVA DE CAPITAL</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Opções Outorgadas Reconhecidas</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+
+                                <tr>
+                                    <td>&emsp;&emsp;RESERVA DE LUCROS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;Reserva de Lucros a Realizar</td>
+                                    <td>R$ 89.385,98</td>
+                                    <td>R$ 89.385,98</td>
+                                </tr>
+
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;
+                                        ( - ) Ações em Tesouraria</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+
+                                <tr>
+                                    <td>&emsp;&emsp;AJUSTES DE AVALIAÇÃO PATRIMONIAL</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;&emsp;&emsp;AJUSTES ACUMULADOS DE CONVERSÃO</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;&emsp;(-) PREJUÍZOS ACUMULADOS</td>
+                                    <td>R$ -</td>
+                                    <td>R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL PASSIVO</td>
+                                    <td>R$ 1.638.210,00</td>
+                                    <td>R$ 1.977.375,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dadosDRE" tabindex="-1" aria-labelledby="dadosDRELabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="dadosDRELabel">DRE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-4">
+                        <h1 class="text-center">EMPRESA: COMÉRCIO DE CALÇADOS PISADA LTDA</h1>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">DEMONSTRAÇÃO DE RESULTADO DO EXERCÍCIO - DRE</th>
+                                    <th scope="col">2022</th>
+                                    <th scope="col">2023</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="coluna1">( = ) RECEITA BRUTA DAS VENDAS E SERVIÇOS</td>
+                                    <td class="dados">R$ 165.285,00</td>
+                                    <td class="dados">R$ 455.892,60</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Devoluções de Mercadorias</td>
+                                    <td class="dados">R$ -</td>
+                                    <td class="dados">R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Abatimentos</td>
+                                    <td class="dados">R$ -</td>
+                                    <td class="dados">R$ -</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Impostos sobre Vendas e Serviços</td>
+                                    <td class="dados">R$ 45.040,16</td>
+                                    <td class="dados">R$ 124.230,73</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) ICMS sobre Vendas</td>
+                                    <td class="dados">R$ 29.751,30</td>
+                                    <td class="dados">R$ 82.060,67</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) COFINS sobre Vendas</td>
+                                    <td class="dados">R$ 12.561,66</td>
+                                    <td class="dados">R$ 34.647,84</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) PIS sobre Vendas</td>
+                                    <td class="dados">R$ 2.727,20</td>
+                                    <td class="dados">R$ 7.522,23</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) RECEITA LÍQUIDA DAS VENDAS E SERVIÇOS</td>
+                                    <td class="dados">R$ 120.244,84</td>
+                                    <td class="dados">R$ 331.661,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) CMV/CPV/CSP</td>
+                                    <td class="dados">R$ 54.738,00</td>
+                                    <td class="dados">R$ 135.000,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) LUCRO BRUTO</td>
+                                    <td class="dados">R$ 65.506,84</td>
+                                    <td class="dados">R$ 196.661,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) DESPESAS OPERACIONAIS</td>
+                                    <td class="dados"></td>
+                                    <td class="dados"></td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas com Vendas</td>
+                                    <td class="dados">R$ 51.265,57</td>
+                                    <td class="dados">R$ 93.290,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas Gerais e Administrativas</td>
+                                    <td class="dados">R$ 4.550,00</td>
+                                    <td class="dados">R$ 6.550,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas Financeiras</td>
+                                    <td class="dados">R$ 23.801,00</td>
+                                    <td class="dados">R$ 37.930,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas com Marketing</td>
+                                    <td class="dados">R$ 1.564,57</td>
+                                    <td class="dados">R$ 3.200,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas de PCLD</td>
+                                    <td class="dados">R$ 6.850,00</td>
+                                    <td class="dados">R$ 7.560,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Depreciação Acumulada</td>
+                                    <td class="dados">R$ 1.750,00</td>
+                                    <td class="dados">R$ 15.250,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( + ) Outras Receitas Operacionais</td>
+                                    <td class="dados">R$ 12.750,00</td>
+                                    <td class="dados">R$ 22.800,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) LUCRO OU PREJUÍZO LÍQUIDO</td>
+                                    <td class="dados">R$ 14.241,27</td>
+                                    <td class="dados">R$ 103.371,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) RECEITAS OU DESPESAS NÃO OPERACIONAIS</td>
+                                    <td class="dados"></td>
+                                    <td class="dados"></td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( + ) Receitas Não Operacionais</td>
+                                    <td class="dados">R$ 14.241,27</td>
+                                    <td class="dados">R$ 103.371,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Despesas Não Operacionais</td>
+                                    <td class="dados">R$ 2.136,19</td>
+                                    <td class="dados">R$ 15.505,78</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) LUCRO OU PREJUÍZO ANTES DO IR E CSSL</td>
+                                    <td class="dados">R$ 26.346,08</td>
+                                    <td class="dados">R$ 191.237,96</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Provisão para o IR - (15%)</td>
+                                    <td class="dados">R$ 1.281,71</td>
+                                    <td class="dados">R$ 9.303,47</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">&emsp;&emsp;( - ) Provisão para a CSSL - (9%)</td>
+                                    <td class="dados">R$ 10.823,36</td>
+                                    <td class="dados">R$ 78.562,62</td>
+                                </tr>
+                                <tr>
+                                    <td class="coluna1">( = ) RESULTADO LÍQUIDO DO EXERCÍCIO</td>
+                                    <td class="dados">R$ 14.241,27</td>
+                                    <td class="dados">R$ 103.371,87</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-feedback-correto" tabindex="-1" aria-labelledby="modal-feedback-positivo"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Correto!</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/img_feed_pos.png" alt="">
+                    <div class="text">
+                        <p>
+                            Parabéns, você acertou!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal ui-btn" data-bs-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-feedback-errado" tabindex="-1" aria-labelledby="modal-feedback-negativo"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hmm...</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/img_feed_neg.png" alt="">
+                    <div class="text">
+                        <p>Sua resposta está incorreta! Escolha outra alternativa!</p>
+                        <p>Tente novamente!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ui-btn" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
