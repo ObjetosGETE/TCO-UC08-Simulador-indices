@@ -39,7 +39,8 @@ function resizeBodyConteudo() {
 }
 
 $(document).ready(function () {
-    resizeBodyConteudo()
+    telaCheia();
+    resizeBodyConteudo();
     $(window).resize(function () {
         resizeBodyConteudo()
     })
@@ -185,18 +186,36 @@ $('.bt-resumo-folha').click(function () {
 })
 
 
-var customSelect = document.querySelector('.custom-select');
-    var selectSelected = customSelect.querySelector('.select-selected');
-    var selectItems = customSelect.querySelector('.select-items');
-    var options = selectItems.querySelectorAll('div');
+function telaCheia() {
+    $('.btnFullScreen').on('click', toggleFullScreen);
 
-    selectSelected.addEventListener('click', function() {
-        selectItems.classList.toggle('open');
-    });
+    function toggleFullScreen() {
+        var elem = document.documentElement;
 
-    options.forEach(function(option) {
-        option.addEventListener('click', function() {
-            selectSelected.textContent = this.textContent;
-            selectItems.classList.remove('open');
-        });
-    });
+        if (!document.fullscreenElement && !document.mozFullScreenElement &&
+            !document.webkitFullscreenElement && !document.msFullscreenElement) {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+                $('.btnFullScreen i').text('fullscreen');
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+                $('.btnFullScreen i').text('fullscreen_exit');
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+    }
+}
+
