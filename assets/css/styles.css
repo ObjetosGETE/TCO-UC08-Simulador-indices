@@ -541,8 +541,7 @@ table select.errado {
 }
 
 .estilo-coluna {
-  font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .subtitulo-modal {
@@ -632,4 +631,8 @@ table td {
   border-radius: 10px;
   padding-inline: 3%;
   width: 500px;
+}
+
+.vermelhinho{
+  color: red;
 }

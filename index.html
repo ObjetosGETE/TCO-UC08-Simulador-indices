@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,19 +26,11 @@
     <div class="wrapper">
 
         <div class="tela tela-1">
-
-
             <h1 class="title">Curso Técnico em Contabilidade</h1>
             <img src="assets/img/capa/capa_titulo.png" alt="Simulador de Folha de Pagamento" class="titulo">
             <button class="btn-iniciar ui-btn">Iniciar</button>
         </div>
         <div class="tela tela-2">
-            <div class="menu-esq">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-            </div>
             <div class="ui-msg">
                 <p>Olá, estudante! </p>
                 <p>Agora que você já fez a simulação do fluxo de caixa, precisará definir os indicadores financeiros e
@@ -48,23 +40,6 @@
                 <button class="btn-proximo ui-btn">Avançar</button>
             </div>
         </div>
-
-        <!-- <div class="tela tela-final">
-            <div class="menu-esq">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-                <img class="bt-blip" src="assets/img/bts/bt_lateral_mini.png" alt="">
-            </div>
-            <div class="ui-msg">
-                <h2>Encerramento</h2>
-                <p>Nesta simulação, você teve a oportunidade de vivenciar o cálculo de uma folha de pagamento,
-                    realizando todos os procedimentos que esse processo envolve. </p>
-                <p>Foi uma oportunidade de ver na prática um pouco das rotinas trabalhistas, passando pelo cálculo dos
-                    proventos e descontos de um colaborador e pelo cálculo do pró-labore dos sócios. Também foi possível
-                    vivenciar a emissão de guias, DARFs e recibos pertinentes à folha de pagamento.</p>
-            </div>
-        </div> -->
 
         <div class="pop-up pop-up-1" data-pop="1">
             <div class="botoes">
@@ -576,6 +551,120 @@
                 <button class="ui-btn checar-tabelas">Conferir resultado</button>
             </div>
         </div>
+
+        <div class="pop-up pop-up-2" data-pop="2">
+            <div class="botoes">
+                <button type="button" class="btn estilo-menu" data-bs-toggle="modal"
+                    data-bs-target="#dadosAtivoCirculante">
+                    Balanço Patrimonial Ativo
+                </button>
+
+                <button type="button" class="btn estilo-menu" data-bs-toggle="modal" data-bs-target="#dadosPassivo">
+                    Balanço patrimonial Passivo
+                </button>
+
+                <button type="button" class="btn estilo-menu" data-bs-toggle="modal" data-bs-target="#dadosDRE">
+                    DEMONSTRAÇÃO DE RESULTADO DO EXERCÍCIO - DRE
+                </button>
+
+                <button type="button" class="btn som-clique btn.estilo-menu btnFullScreen">
+                    <i class="material-symbols-outlined">
+                        fullscreen_exit
+                    </i>
+                </button>
+            </div>
+            <div class="div-tabela">
+                <table class="table estilo-tabela">
+                    <thead>
+                        <h4>Indicadores: Definições</h4>
+                        <tr>
+                            <th class="titulo-tabela" scope="col">ÍNDICES/INDICADORES-FINANCEIROS</th>
+                            <th class="titulo-tabela" scope="col">FÓRMULAS</th>
+                            <th class="titulo-tabela" scope="col">APURAÇÃO</th>
+                            <th class="titulo-tabela" scope="col">RESULTADO</th>
+                            <th class="titulo-tabela" scope="col">PARECER / REFERÊNCIA</th>
+                            <th class="titulo-tabela" scope="col">FEEDBACK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Liquidez corrente =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,55</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo, visto que possui R$ 664.282,09 de obrigações que vencerão no curto prazo, mas tem apenas R$ 122.500,00 em disponibilidades.</td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Liquidez Seca =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,24</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo desconsiderando os seus estoques.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">
+                                Prazo Médio de Recebimento(PMR) =</td>
+                                <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                                <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                                <td scope="col" class="estilo-coluna" class="select-container col-resultado">62,40</td>
+                                <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                                <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que quanto menor melhor esse indicador, pois indica o número de dias que a empresa leva, em média, para receber efetivamente o valor de suas vendas.
+                                </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Giro do Ativo (GA) =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,07</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, pois o giro do ativo (GA) é uma comparação de quanto a empresa vende – seja em produtos ou serviços – em relação ao total de ativos que ela possui. Quanto maior for esse número, melhor para a organização, pois isso significa que ela gera cada vez mais vendas com uma mesma base de ativos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Retorno sobre o investimento(ROI) =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,01</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador do retorno de Investimento - quanto maior é melhor para a organização , pois o ROI tem o objetivo de traçar uma relação entre os ganhos gerados pelo investimento e o montante total investido. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Grau de endividamento =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">4,78</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada, que ela já não tem mais capital próprio. Ou seja, está insolvente.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Participação dos Capitais de Terceiros (PCT) =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,83</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada e depende da participação do capital de terceiros.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="estilo-coluna">Margem líquida (ML) =</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,12</td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
+                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que quanto MAIOR melhor. Esse indicador é útil para expressar a relação entre o lucro líquido da empresa e a sua receita líquida de vendas. Margem líquida (ML) = Lucro Líquido/ Vendas Líquidas.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="ui-btn checar-tabelas">Conferir resultado</button>
+            </div>
+        </div>
+
     </div>
 
 
@@ -641,7 +730,7 @@
                                         <td>R$ 241.600,00</td>
                                         <td>R$ -</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;&emsp;&emsp;(-) PCLD</td>
                                         <td>R$ 34.250,00</td>
                                         <td>R$ 192.700,00</td>
@@ -736,7 +825,7 @@
                                         <td>R$ -</td>
                                         <td>R$ -</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;&emsp;&emsp;(-) Depreciações Acumulada</td>
                                         <td>R$ -</td>
                                         <td>R$ -</td>
@@ -777,7 +866,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="dadosPassivo" tabindex="-1" aria-labelledby="dadosPassivoLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -917,13 +1005,13 @@
                                         <td>R$ -</td>
                                         <td>R$ -</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;&emsp;&emsp;(-) Capital a Integralizar</td>
                                         <td>R$ 283.483,00</td>
                                         <td>R$ 365.753,00</td>
                                     </tr>
 
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;&emsp;&emsp;(-) Gastos com a Emissão de Ações</td>
                                         <td>R$ 272.659,64</td>
                                         <td>R$ 276.367,02</td>
@@ -950,7 +1038,7 @@
                                         <td>R$ 89.385,98</td>
                                     </tr>
 
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;&emsp;&emsp;( - ) Ações em Tesouraria</td>
                                         <td>R$ -</td>
                                         <td>R$ -</td>
@@ -966,7 +1054,7 @@
                                         <td>R$ -</td>
                                         <td>R$ -</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td class="cor-sim-modal">&emsp;&emsp;(-) PREJUÍZOS ACUMULADOS</td>
                                         <td class="cor-sim-modal">R$ -</td>
                                         <td class="cor-sim-modal">R$ -</td>
@@ -1026,7 +1114,7 @@
                                         <td>R$ -</td>
                                         <td>R$ -</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;( - ) Impostos sobre Vendas e Serviços</td>
                                         <td>R$ 45.040,16</td>
                                         <td>R$ 124.230,73</td>
@@ -1051,7 +1139,7 @@
                                         <td class="destaque-titulo">R$ 120.244,84</td>
                                         <td class="destaque-titulo">R$ 331.661,87</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;( - ) CMV/CPV/CSP</td>
                                         <td>R$ 54.738,00</td>
                                         <td>R$ 135.000,00</td>
@@ -1061,7 +1149,7 @@
                                         <td class="destaque-titulo">R$ 65.506,84</td>
                                         <td class="destaque-titulo">R$ 196.661,87</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;( - ) DESPESAS OPERACIONAIS</td>
                                         <td></td>
                                         <td></td>
@@ -1126,12 +1214,12 @@
                                         <td>R$ 26.346,08</td>
                                         <td>R$ 191.237,96</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;( - ) Provisão para o IR - (15%)</td>
                                         <td>R$ 1.281,71</td>
                                         <td>R$ 9.303,47</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="vermelhinho">
                                         <td>&emsp;&emsp;( - ) Provisão para a CSSL - (9%)</td>
                                         <td>R$ 10.823,36</td>
                                         <td>R$ 78.562,62</td>
