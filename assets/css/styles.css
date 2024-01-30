@@ -451,19 +451,27 @@ table select.errado {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
-
-
 .div-tabela {
   background-color: #597994;
   color: white;
   padding: 1px;
   border-radius: 15px;
-  height: 854px;
   border: 2px solid #bfccdc;
 }
 
 .div-tabela tbody tr:nth-child(even) {
+  background-color: #e7eff7;
+}
+
+.div-tabela-2 {
+  background-color: #597994;
+  color: white;
+  padding: 1px;
+  border-radius: 15px;
+  border: 2px solid #bfccdc;
+}
+
+.div-tabela-2 tbody tr:nth-child(even) {
   background-color: #e7eff7;
 }
 
@@ -531,7 +539,7 @@ table select.errado {
 }
 
 .material-symbols-outlined {
-	font-size: 65px;
+  font-size: 65px;
 }
 
 .pop-up h4 {
@@ -633,6 +641,24 @@ table td {
   width: 500px;
 }
 
-.vermelhinho{
+.vermelhinho {
   color: red;
+}
+
+.col-formulas {
+  width: 15%;
+}
+
+.col-parecer {
+  width: 15%;
+}
+
+.col-apuracao {
+  width: 20%;
+}
+
+
+.estilo-selecao option {
+  white-space: normal;
+  /* força a quebra de linha */
 }

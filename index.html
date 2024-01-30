@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador - Análise de Índices</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -41,7 +40,7 @@
             </div>
         </div>
 
-        <div class="pop-up pop-up-1" data-pop="1">
+       <div class="pop-up pop-up-1" id="pop-up-1" data-pop="1">
             <div class="botoes">
                 <button type="button" class="btn estilo-menu" data-bs-toggle="modal"
                     data-bs-target="#dadosAtivoCirculante">
@@ -75,7 +74,7 @@
                     <tbody>
                         <tr>
                             <td scope="col" class="estilo-coluna">Liquidez corrente =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="correto">Indicador que tem a capacidade de transformar o Ativo
@@ -120,7 +119,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="correto">>1 é favorável</option>
@@ -132,7 +131,7 @@
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Liquidez Seca =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -177,8 +176,8 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
-                                <select class="estilo-selecao form-select text-wrap ">
+                            <td scope="col" class="estilo-coluna">
+                                <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="correto">>1 é favorável</option>
                                     <option value="errado">Quanto MENOR melhor</option>
@@ -191,7 +190,7 @@
                         <tr>
                             <td scope="col" class="estilo-coluna">
                                 Prazo Médio de Recebimento(PMR) =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -237,7 +236,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -252,7 +251,7 @@
                             <td scope="col" class="estilo-coluna">
                                 Giro do Ativo (GA) =
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -296,7 +295,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -311,7 +310,7 @@
                             <td scope="col" class="estilo-coluna">
                                 Retorno sobre o investimento(ROI) =
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -356,7 +355,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -371,7 +370,7 @@
                             <td scope="col" class="estilo-coluna">
                                 Grau de endividamento =
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -416,7 +415,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -430,7 +429,7 @@
                             <td scope="col" class="estilo-coluna">
                                 Participação dos Capitais de Terceiros (PCT) =
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -475,7 +474,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -490,7 +489,7 @@
                             <td scope="col" class="estilo-coluna">
                                 Margem líquida (ML) =
                             </td>
-                            <td scope="col" class="estilo-coluna" class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">Indicador que tem a capacidade de transformar o Ativo
@@ -535,7 +534,7 @@
                                         relação às receitas de uma empresa. </option>
                                 </select>
                             </td>
-                            <td scope="col" class="estilo-coluna " class="select-container">
+                            <td scope="col" class="estilo-coluna">
                                 <select class="estilo-selecao form-select text-wrap ">
                                     <option value=""></option>
                                     <option value="errado">>1 é favorável</option>
@@ -548,11 +547,11 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="ui-btn checar-tabelas">Conferir resultado</button>
+                <button class="ui-btn checar-tabelas resultado-tela-um">Conferir resultado</button>
             </div>
         </div>
 
-        <div class="pop-up pop-up-2" data-pop="2">
+        <div class="pop-up pop-up-2 " id="pop-up-2" data-pop="2">
             <div class="botoes">
                 <button type="button" class="btn estilo-menu" data-bs-toggle="modal"
                     data-bs-target="#dadosAtivoCirculante">
@@ -573,7 +572,7 @@
                     </i>
                 </button>
             </div>
-            <div class="div-tabela">
+            <div class="div-tabela-2">
                 <table class="table estilo-tabela">
                     <thead>
                         <h4>Indicadores: Definições</h4>
@@ -589,79 +588,593 @@
                     <tbody>
                         <tr>
                             <td scope="col" class="estilo-coluna">Liquidez corrente =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,55</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo, visto que possui R$ 664.282,09 de obrigações que vencerão no curto prazo, mas tem apenas R$ 122.500,00 em disponibilidades.</td>
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="correto">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="correto">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="correto">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="correto">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,55</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="correto">Desfavorável</option>
+                                    <option value="errado">Favorável</option>
+                                    <option value="errado">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">
+                                <p class="acertou d-none">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo, visto que possui R$ 664.282,09 de obrigações que vencerão no curto prazo, mas tem apenas R$ 122.500,00 em disponibilidades.</p>
+                                <p class="errou d-none">O indicador consta como favorável, opção incorreta, pois na situação descrita a empresa demonstra não ter capacidade para honrar suas obrigações de curto prazo. Favorável é quando o resultado é maior que 1 (Liquidez Corrente = Ativo Circulante / Passivo Circulante).</p>
+                            </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Liquidez Seca =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,24</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo desconsiderando os seus estoques.
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="correto">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="correto">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="correto">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="correto">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,24</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="correto">Desfavorável</option>
+                                    <option value="errado">Favorável</option>
+                                    <option value="errado">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">O indicador se mostra desfavorável, o ideal é que seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade de honrar com as suas obrigações de curto prazo desconsiderando os seus estoques.
                             </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">
                                 Prazo Médio de Recebimento(PMR) =</td>
-                                <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                                <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                                <td scope="col" class="estilo-coluna" class="select-container col-resultado">62,40</td>
-                                <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                                <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que quanto menor melhor esse indicador, pois indica o número de dias que a empresa leva, em média, para receber efetivamente o valor de suas vendas.
+                                <td scope="col" class="col-formulas">
+                                    <select class="estilo-selecao form-select text-wrap ">
+                                        <option value=""></option>
+                                        <option value="errado">Ativo Circulante</option>
+                                        <option value="errado">Ativo Circulante - Estoques</option>
+                                        <option value="errado">Ativo Total</option>
+                                        <option value="correto">Duplicatas a receber x 360</option>
+                                        <option value="errado">Exigível Total</option>
+                                        <option value="errado">Lucro Líquido</option>
+                                        <option value="errado">Passivo Circulante</option>
+                                        <option value="errado">Patrimônio Líquido</option>
+                                        <option value="errado">Vendas Brutas</option>
+                                        <option value="errado">Vendas Líquidas </option>
+                                    </select> <br>
+                                    <select class="estilo-selecao form-select text-wrap ">
+                                        <option value=""></option>
+                                        <option value="errado">Ativo Circulante</option>
+                                        <option value="errado">Ativo Circulante - Estoques</option>
+                                        <option value="errado">Ativo Total</option>
+                                        <option value="errado">Duplicatas a receber x 360</option>
+                                        <option value="errado">Exigível Total</option>
+                                        <option value="errado">Lucro Líquido</option>
+                                        <option value="errado">Passivo Circulante</option>
+                                        <option value="errado">Patrimônio Líquido</option>
+                                        <option value="correto">Vendas Brutas</option>
+                                        <option value="errado">Vendas Líquidas </option>
+                                    </select>
+                                </td>
+                                <td scope="col" class="col-apuracao">
+                                    <select class="estilo-selecao form-select text-wrap ">
+                                        <option value=""></option>
+                                        <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                        <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                        <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                        <option value="correto">Clientes R$ 28.650,00 x 360</option>
+                                        <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                        <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                        <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                        <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                        <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                        <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                        <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                    </select> <br>
+                                    <select class="estilo-selecao form-select text-wrap ">
+                                        <option value=""></option>
+                                        <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                        <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                        <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                        <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                        <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                        <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                        <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                        <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                        <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                        <option value="correto">Vendas Brutas R$ 165.285,00  </option>
+                                        <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                    </select>
+                                </td>
+                                <td scope="col" class="col-resultado">62,40</td>
+                                <td scope="col" class="col-parecer">
+                                    <select class="estilo-selecao form-select text-wrap ">
+                                        <option value=""></option>
+                                        <option value="errado">Desfavorável</option>
+                                        <option value="errado">Favorável</option>
+                                        <option value="errado">Quanto MAIOR melhor</option>
+                                        <option value="correto">Quanto MENOR melhor</option>
+                                    </select>
+                                </td>
+                                <td scope="col" class="col-feedback">O indicador se mostra favorável, o ideal é que quanto menor melhor esse indicador, pois indica o número de dias que a empresa leva, em média, para receber efetivamente o valor de suas vendas.
                                 </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Giro do Ativo (GA) =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,07</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, pois o giro do ativo (GA) é uma comparação de quanto a empresa vende – seja em produtos ou serviços – em relação ao total de ativos que ela possui. Quanto maior for esse número, melhor para a organização, pois isso significa que ela gera cada vez mais vendas com uma mesma base de ativos.
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="correto">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="correto">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="correto">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="correto">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,07</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Desfavorável</option>
+                                    <option value="errado">Favorável</option>
+                                    <option value="correto">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">O indicador se mostra favorável, pois o giro do ativo (GA) é uma comparação de quanto a empresa vende – seja em produtos ou serviços – em relação ao total de ativos que ela possui. Quanto maior for esse número, melhor para a organização, pois isso significa que ela gera cada vez mais vendas com uma mesma base de ativos.
                             </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Retorno sobre o investimento(ROI) =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,01</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador do retorno de Investimento - quanto maior é melhor para a organização , pois o ROI tem o objetivo de traçar uma relação entre os ganhos gerados pelo investimento e o montante total investido. 
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="correto">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="correto">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="correto">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="correto">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,01</td>
+                            <td scope="col" class="col-parecer"><select class="estilo-selecao form-select text-wrap ">
+                                <option value=""></option>
+                                <option value="errado">Desfavorável</option>
+                                <option value="errado">Favorável</option>
+                                <option value="correto">Quanto MAIOR melhor</option>
+                                <option value="errado">Quanto MENOR melhor</option>
+                            </select>
+                        </td>
+                            <td scope="col" class="col-feedback">O indicador do retorno de Investimento - quanto maior é melhor para a organização , pois o ROI tem o objetivo de traçar uma relação entre os ganhos gerados pelo investimento e o montante total investido. 
                             </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Grau de endividamento =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">4,78</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra desfavorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada, que ela já não tem mais capital próprio. Ou seja, está insolvente.
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="correto">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="correto">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="correto">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="correto">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">4,78</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="correto">Desfavorável</option>
+                                    <option value="errado">Favorável</option>
+                                    <option value="errado">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">O indicador se mostra desfavorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada, que ela já não tem mais capital próprio. Ou seja, está insolvente.
                             </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Participação dos Capitais de Terceiros (PCT) =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,83</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada e depende da participação do capital de terceiros.
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="correto">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="correto">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="correto">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="correto">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,83</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Desfavorável</option>
+                                    <option value="correto">Favorável</option>
+                                    <option value="errado">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">O indicador se mostra favorável, o ideal é que seja inferior a 1. Quando está acima de 1 indica que a empresa está individada e depende da participação do capital de terceiros.
                             </td>
                         </tr>
                         <tr>
                             <td scope="col" class="estilo-coluna">Margem líquida (ML) =</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-formulas"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-apuracao"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-resultado">0,12</td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-parecer"></td>
-                            <td scope="col" class="estilo-coluna" class="select-container col-feedback">O indicador se mostra favorável, o ideal é que quanto MAIOR melhor. Esse indicador é útil para expressar a relação entre o lucro líquido da empresa e a sua receita líquida de vendas. Margem líquida (ML) = Lucro Líquido/ Vendas Líquidas.
+                            <td scope="col" class="col-formulas">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="correto">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="errado">Vendas Líquidas </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante</option>
+                                    <option value="errado">Ativo Circulante - Estoques</option>
+                                    <option value="errado">Ativo Total</option>
+                                    <option value="errado">Duplicatas a receber x 360</option>
+                                    <option value="errado">Exigível Total</option>
+                                    <option value="errado">Lucro Líquido</option>
+                                    <option value="errado">Passivo Circulante</option>
+                                    <option value="errado">Patrimônio Líquido</option>
+                                    <option value="errado">Vendas Brutas</option>
+                                    <option value="correto">Vendas Líquidas </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-apuracao">
+                                <select class="estilo-selecao form-select text-wrap">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="correto">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="errado">Vendas Líquidas R$ 120.244,84   </option>
+                                </select> <br>
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00</option>
+                                    <option value="errado">Ativo Circulante R$ 364.460,00 - Estoque R$ 207.710,00 </option>
+                                    <option value="errado">Ativo R$ 1.638.210,00 </option>
+                                    <option value="errado">Clientes R$ 28.650,00 x 360</option>
+                                    <option value="errado">Lucro Líquido R$ 10.823,36 </option>
+                                    <option value="errado">Lucro Líquido R$ 14.241,27 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 </option>
+                                    <option value="errado">Passivo Circulante R$ 664.282,09 + Passivo Não circulante R$ 690.444,91 </option>
+                                    <option value="errado">Patrimônio Líquido R$ 283.483,00 </option>
+                                    <option value="errado">Vendas Brutas R$ 165.285,00  </option>
+                                    <option value="correto">Vendas Líquidas R$ 120.244,84   </option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-resultado">0,12</td>
+                            <td scope="col" class="col-parecer">
+                                <select class="estilo-selecao form-select text-wrap ">
+                                    <option value=""></option>
+                                    <option value="errado">Desfavorável</option>
+                                    <option value="errado">Favorável</option>
+                                    <option value="correto">Quanto MAIOR melhor</option>
+                                    <option value="errado">Quanto MENOR melhor</option>
+                                </select>
+                            </td>
+                            <td scope="col" class="col-feedback">O indicador se mostra favorável, o ideal é que quanto MAIOR melhor. Esse indicador é útil para expressar a relação entre o lucro líquido da empresa e a sua receita líquida de vendas. Margem líquida (ML) = Lucro Líquido/ Vendas Líquidas.
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="ui-btn checar-tabelas">Conferir resultado</button>
+                <button class="ui-btn checar-tabelas resultado-tela-dois">Conferir resultado</button>
             </div>
         </div>
 
@@ -1284,6 +1797,51 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-feedback-correto-tela2" tabindex="-1" aria-labelledby="modal-feedback-positivo-tela2"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Correto!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/img_feed_pos.png" alt="">
+                <div class="text">
+                    <p>
+                        Parabéns, você configurou corretamente as fórmulas no software contábil e selecionou de maneira assertiva as contas contábeis envolvidas na apuração desse índice. 
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="close-modal ui-btn" data-bs-dismiss="modal">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-feedback-errado-tela2" tabindex="-1" aria-labelledby="modal-feedback-negativo-tela2"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hmm...</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/img_feed_neg.png" alt="">
+                <div class="text">
+                    <p>Infelizmente a parametrização das contas desse índice não está correta. A Apuração desse índice envolve outras contas contábeis. Tente novamente!
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="ui-btn" data-bs-dismiss="modal">Voltar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
