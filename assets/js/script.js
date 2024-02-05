@@ -39,6 +39,7 @@ function resizeBodyConteudo() {
 }
 
 $(document).ready(function () {
+    controleFeedback();
     telaCheia();
     avaliacaoTelaUm();
     avaliacaoTelaDois();
@@ -190,11 +191,29 @@ function telaCheia() {
         }
     }
 }
-$(document).ready(function(){
+$(document).ready(function () {
     $('.btn-proximo').click(function () {
         $('.tela-2').fadeOut();
         setTimeout(function () {
-            $('#pop-up-1').fadeIn();
+            $('#pop-up-2').fadeIn();
         }, 500);
     });
 });
+
+function controleFeedback() {
+    for (let i = 1; i <= 9; i++) {
+        $(`.selecao${i}`).change(function () {
+            const feedbackPositivo = $(this).closest('tr').find(`.p-feedback${i}-positivo`);
+            const feedbackNegativo = $(this).closest('tr').find(`.p-feedback${i}-negativo`);
+            const selectedValue = $(this).val();
+
+            if (selectedValue === 'correto') {
+                feedbackPositivo.removeClass('d-none');
+                feedbackNegativo.addClass('d-none');
+            } else {
+                feedbackPositivo.addClass('d-none');
+                feedbackNegativo.removeClass('d-none');
+            }
+        });
+    }
+}
