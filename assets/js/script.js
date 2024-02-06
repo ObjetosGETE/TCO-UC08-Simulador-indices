@@ -1,4 +1,3 @@
-// funcao de resize
 function escalaProporcao(largura, altura) {
 
     var larguraScreen = $(window).width();
@@ -54,16 +53,13 @@ const audio = new Audio();
 $('.pop-up').hide();
 $('.tela:not(.tela-1)').hide();
 
-// navegacao
+
 $('.btn-iniciar').click(function () {
     $('.tela-1').fadeOut();
     setTimeout(function () {
         $('.tela-2').fadeIn();
     }, 500)
 })
-
-
-// exercicios da tabela
 
 
 function avaliacaoTelaUm() {
@@ -119,14 +115,14 @@ function avaliacaoTelaDois() {
             if (exercicios[i].value == 'errado' || exercicios[i].value == '') {
                 exercicios[i].classList.add('errado');
                 errados++;
-                // Mostra o parágrafo com a classe errado e esconde o parágrafo com a classe acertou
+
                 $(exercicios[i]).siblings('.errou').removeClass('d-none');
                 $(exercicios[i]).siblings('.acertou').addClass('d-none');
             }
             if (exercicios[i].value == 'correto') {
                 exercicios[i].classList.add('correto');
                 corretos++;
-                // Mostra o parágrafo com a classe acertou e esconde o parágrafo com a classe errado
+
                 $(exercicios[i]).siblings('.acertou').removeClass('d-none');
                 $(exercicios[i]).siblings('.errou').addClass('d-none');
             }
@@ -148,14 +144,15 @@ function avaliacaoTelaDois() {
     $('select').click(function () {
         $(this).removeClass('correto');
         $(this).removeClass('errado');
-        // Esconde ambos os parágrafos ao selecionar uma nova opção
+
         $(this).siblings('.errou').addClass('d-none');
         $(this).siblings('.acertou').addClass('d-none');
     });
 
-    $('#modal-feedback-correto .close-modal').click(function () {
+    $('.finalizar').click(function () {
         $('.pop-up-2').fadeOut();
-        $('.div-final').fadeIn();
+        $('.tela-3').removeClass('d-none');
+        $('.tela-3').fadeIn();
     });
 }
 
@@ -195,7 +192,7 @@ $(document).ready(function () {
     $('.btn-proximo').click(function () {
         $('.tela-2').fadeOut();
         setTimeout(function () {
-            $('#pop-up-2').fadeIn();
+            $('#pop-up-1').fadeIn();
         }, 500);
     });
 });
