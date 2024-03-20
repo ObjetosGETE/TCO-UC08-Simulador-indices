@@ -97,7 +97,20 @@ function avaliacaoTelaUm() {
         $(this).removeClass('correto');
         $(this).removeClass('errado');
     });
-
+    $('.selecionar-opcao').click(function () {
+        $(this).addClass('btn-ativo');
+    })
+    $('.seletor-options button').click(function () {
+        let option = parseInt($(this)[0].dataset.option);
+        $('.btn-ativo').siblings('select').find('option')[option].selected = 'selected';
+        // $('.btn-ativo').hide();
+        $('.btn-ativo').removeClass('.btn-ativo');
+        $('.btn-ativo').siblings('select')[0].style.display = 'block';
+        $(this).parents('.modal-content').find('.btn-secondary')[0].click();
+    })
+    $('#seletor-indicadores .btn-secondary').click(function () {
+        $('.btn-ativo').removeClass('btn-ativo');
+    })
     $('#modal-feedback-correto .close-modal').click(function () {
         $('.pop-up-1').fadeOut();
         $('.pop-up-2').fadeIn();
@@ -123,7 +136,7 @@ function avaliacaoTelaDois() {
                 exercicios[i].classList.add('correto');
                 corretos++;
                 let parentRow = $(exercicios[i]).parents('tr');
-                if(parentRow.find('select.correto').length == parentRow.find('select').length){
+                if (parentRow.find('select.correto').length == parentRow.find('select').length) {
                     parentRow.find('.col-resultado')[0].style.opacity = 1;
                 }
 

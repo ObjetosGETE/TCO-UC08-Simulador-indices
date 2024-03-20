@@ -666,14 +666,15 @@ table td {
 
 .botoes {
   display: flex;
+  justify-content: space-between;
 }
 
-#modal-feedback-correto .modal-body,
-#modal-feedback-errado .modal-body,
-#modal-feedback-correto-tela2 .modal-body,
-#modal-feedback-errado-tela2 .modal-body 
-{
+.modal-body {
   background-color: #e5eeff;
+}
+
+#pop-up-1 td {
+  height: 100%;
 }
 
 #pop-up-2 .col-resultado {
@@ -682,4 +683,43 @@ table td {
 
 .form-select {
   font-size: 18px;
+}
+
+.selecionar-opcao {
+  display: block;
+  width: 300px;
+  margin-right: 15px;
+  background-color: #597994;
+  color: white;
+  border: 1px solid #597994;
+}
+
+.selecionar-opcao:hover {
+  background-color: white;
+  color: #597994;
+  border: 1px solid #597994;
+}
+
+#pop-up-1 .select-definicao {
+  display: inline-block;
+  pointer-events: none;
+
+}
+
+.estilo-coluna.flex {
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#seletor-indicadores .seletor-options button {
+  margin: 5px 15px;
+  background-color: #597994;
+  color: white;
+  border: 1px solid #597994;
+  box-shadow: 2px 2px 2px #333;
+}
+
+#seletor-indicadores .seletor-options button:hover {
+  box-shadow: 4px 4px 4px #333;
 }
