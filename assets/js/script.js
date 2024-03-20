@@ -122,6 +122,10 @@ function avaliacaoTelaDois() {
             if (exercicios[i].value == 'correto') {
                 exercicios[i].classList.add('correto');
                 corretos++;
+                let parentRow = $(exercicios[i]).parents('tr');
+                if(parentRow.find('select.correto').length == parentRow.find('select').length){
+                    parentRow.find('.col-resultado')[0].style.opacity = 1;
+                }
 
                 $(exercicios[i]).siblings('.acertou').removeClass('d-none');
                 $(exercicios[i]).siblings('.errou').addClass('d-none');

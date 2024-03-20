@@ -1,5 +1,5 @@
 * {
-  font-family: "Segoe UI";
+  /* font-family: "Segoe UI"; */
   box-sizing: border-box;
 }
 
@@ -290,7 +290,7 @@ table .select-container {
 
 table select {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   cursor: pointer;
   font-size: 18px;
   border-radius: 0;
@@ -660,4 +660,26 @@ table td {
 .estilo-selecao option {
   white-space: normal;
   /* força a quebra de linha */
+}
+
+/* Alteracoes LP 19/03 */
+
+.botoes {
+  display: flex;
+}
+
+#modal-feedback-correto .modal-body,
+#modal-feedback-errado .modal-body,
+#modal-feedback-correto-tela2 .modal-body,
+#modal-feedback-errado-tela2 .modal-body 
+{
+  background-color: #e5eeff;
+}
+
+#pop-up-2 .col-resultado {
+  opacity: 0;
+}
+
+.form-select {
+  font-size: 18px;
 }
