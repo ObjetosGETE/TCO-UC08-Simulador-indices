@@ -103,7 +103,6 @@ function avaliacaoTelaUm() {
     $('.seletor-options button').click(function () {
         let option = parseInt($(this)[0].dataset.option);
         $('.btn-ativo').siblings('select').find('option')[option].selected = 'selected';
-        // $('.btn-ativo').hide();
         $('.btn-ativo').removeClass('.btn-ativo');
         $('.btn-ativo').siblings('select')[0].style.display = 'block';
         $(this).parents('.modal-content').find('.btn-secondary')[0].click();
