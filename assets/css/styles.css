@@ -679,6 +679,7 @@ table td {
 
 #pop-up-2 .col-resultado {
   opacity: 0;
+  transition-duration: .3s;
 }
 
 .form-select {
@@ -732,4 +733,10 @@ table td {
 
 #seletor-indicadores .seletor-options button:hover {
   box-shadow: 4px 4px 4px #333;
+}
+
+tr.disabled {
+  opacity: .6;
+  pointer-events: none;
+  transition-duration: .5s;
 }

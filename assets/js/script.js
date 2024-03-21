@@ -38,7 +38,7 @@ function resizeBodyConteudo() {
 }
 
 $(document).ready(function () {
-    controleFeedback();
+    // controleFeedback();
     telaCheia();
     avaliacaoTelaUm();
     avaliacaoTelaDois();
@@ -117,44 +117,55 @@ function avaliacaoTelaUm() {
 }
 
 function avaliacaoTelaDois() {
-    $('.resultado-tela-dois').click(function () {
+
+    $('.checar-resposta').click(function () {
         let errados = 0;
         let corretos = 0;
-        let exercicios = ($(this).parents('.pop-up').find('select'));
+        let exercicios = $(this).parents('tr').find('select');
+
         for (let i = 0; i < exercicios.length; i++) {
             exercicios[i].classList.remove('errado');
             exercicios[i].classList.remove('correto');
             if (exercicios[i].value == 'errado' || exercicios[i].value == '') {
                 exercicios[i].classList.add('errado');
                 errados++;
-
-                $(exercicios[i]).siblings('.errou').removeClass('d-none');
-                $(exercicios[i]).siblings('.acertou').addClass('d-none');
             }
+            let parentRow = $(exercicios[i]).parents('tr');
             if (exercicios[i].value == 'correto') {
                 exercicios[i].classList.add('correto');
                 corretos++;
-                let parentRow = $(exercicios[i]).parents('tr');
-                if (parentRow.find('select.correto').length == parentRow.find('select').length) {
-                    parentRow.find('.col-resultado')[0].style.opacity = 1;
-                }
 
-                $(exercicios[i]).siblings('.acertou').removeClass('d-none');
-                $(exercicios[i]).siblings('.errou').addClass('d-none');
+                if (parentRow.find('.col-formulas select.correto').length == 2 && parentRow.find('.col-apuracao select.correto').length == 2) {
+                    setTimeout(() => {
+                        parentRow.find('.col-resultado')[0].style.opacity = 1;
+                    }, 250);
+                }
+            }
+
+            const feedbackPositivo = parentRow.find(`.p-feedback-positivo`);
+            const feedbackNegativo = parentRow.find(`.p-feedback-negativo`);
+            const selectedValue = parentRow.find('.col-parecer select').val();
+
+            if (selectedValue === 'correto') {
+                feedbackPositivo.removeClass('d-none');
+                feedbackNegativo.addClass('d-none');
+            }
+            if (selectedValue === 'errado') {
+                feedbackPositivo.addClass('d-none');
+                feedbackNegativo.removeClass('d-none');
             }
         }
-        if (errados > 0) {
-            $('#modal-feedback-errado-tela2').modal('show');
-            audio.setAttribute('src', 'assets/audio/erro.mp3');
-            audio.load();
-            audio.play();
+        
+        if ($(this).parents('tr').find('select.correto').length == 5 && $(this).parents('tr').next().length > 0) {
+            $(this).parents('tr').next()[0].classList.remove('disabled');
         }
-        if (errados == 0 && corretos == exercicios.length) {
+        if ($('#pop-up-2 select.correto').length == $('#pop-up-2 select').length) {
             $('#modal-feedback-correto-tela2').modal('show');
             audio.setAttribute('src', 'assets/audio/acerto.mp3');
             audio.load();
             audio.play();
         }
+
     });
 
     $('select').click(function () {
@@ -213,20 +224,59 @@ $(document).ready(function () {
     });
 });
 
-function controleFeedback() {
-    for (let i = 1; i <= 9; i++) {
-        $(`.selecao${i}`).change(function () {
-            const feedbackPositivo = $(this).closest('tr').find(`.p-feedback${i}-positivo`);
-            const feedbackNegativo = $(this).closest('tr').find(`.p-feedback${i}-negativo`);
-            const selectedValue = $(this).val();
+// function controleFeedback() {
+//     for (let i = 1; i <= 9; i++) {
+//         $(`.selecao${i}`).change(function () {
+//             const feedbackPositivo = $(this).closest('tr').find(`.p-feedback${i}-positivo`);
+//             const feedbackNegativo = $(this).closest('tr').find(`.p-feedback${i}-negativo`);
+//             const selectedValue = $(this).val();
 
-            if (selectedValue === 'correto') {
-                feedbackPositivo.removeClass('d-none');
-                feedbackNegativo.addClass('d-none');
-            } else {
-                feedbackPositivo.addClass('d-none');
-                feedbackNegativo.removeClass('d-none');
-            }
-        });
-    }
-}
+//             if (selectedValue === 'correto') {
+//                 feedbackPositivo.removeClass('d-none');
+//                 feedbackNegativo.addClass('d-none');
+//             } else {
+//                 feedbackPositivo.addClass('d-none');
+//                 feedbackNegativo.removeClass('d-none');
+//             }
+//         });
+//     }
+// }
+// $('.resultado-tela-dois').click(function () {
+//     let errados = 0;
+//     let corretos = 0;
+//     let exercicios = ($(this).parents('.pop-up').find('select'));
+//     for (let i = 0; i < exercicios.length; i++) {
+//         exercicios[i].classList.remove('errado');
+//         exercicios[i].classList.remove('correto');
+//         if (exercicios[i].value == 'errado' || exercicios[i].value == '') {
+//             exercicios[i].classList.add('errado');
+//             errados++;
+
+//             $(exercicios[i]).siblings('.errou').removeClass('d-none');
+//             $(exercicios[i]).siblings('.acertou').addClass('d-none');
+//         }
+//         if (exercicios[i].value == 'correto') {
+//             exercicios[i].classList.add('correto');
+//             corretos++;
+//             let parentRow = $(exercicios[i]).parents('tr');
+//             if (parentRow.find('select.correto').length == parentRow.find('select').length) {
+//                 parentRow.find('.col-resultado')[0].style.opacity = 1;
+//             }
+
+//             $(exercicios[i]).siblings('.acertou').removeClass('d-none');
+//             $(exercicios[i]).siblings('.errou').addClass('d-none');
+//         }
+//     }
+//     if (errados > 0) {
+//         $('#modal-feedback-errado-tela2').modal('show');
+//         audio.setAttribute('src', 'assets/audio/erro.mp3');
+//         audio.load();
+//         audio.play();
+//     }
+//     if (errados == 0 && corretos == exercicios.length) {
+//         $('#modal-feedback-correto-tela2').modal('show');
+//         audio.setAttribute('src', 'assets/audio/acerto.mp3');
+//         audio.load();
+//         audio.play();
+//     }
+// });

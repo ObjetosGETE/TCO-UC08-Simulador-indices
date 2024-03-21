@@ -679,13 +679,13 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback1-positivo d-none">O indicador se mostra desfavorável, o ideal é que
+                                <p class="p-feedback-positivo d-none">O indicador se mostra desfavorável, o ideal é que
                                     seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade
                                     de honrar com as suas obrigações de curto prazo, visto que possui R$ 664.282,09 de
                                     obrigações que vencerão no curto prazo, mas tem apenas R$ 122.500,00 em
                                     disponibilidades.
                                 </p>
-                                <p class="p-feedback1-negativo d-none">O indicador consta como favorável, opção
+                                <p class="p-feedback-negativo d-none">O indicador consta como favorável, opção
                                     incorreta - pois na situação descrita a empresa demostra não ter capacidade para
                                     honrar suas obrigações de curto prazo, favorável é quando consta o resultado >1
                                     (Liquidez Corrente = Ativo Circulante / Passivo Circulante).
@@ -695,7 +695,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Liquidez Seca =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -768,11 +768,11 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback2-positivo d-none">O indicador se mostra desfavorável, o ideal é que
+                                <p class="p-feedback-positivo d-none">O indicador se mostra desfavorável, o ideal é que
                                     seja superior a 1. Quando está abaixo de 1 indica que a empresa não tem capacidade
                                     de honrar com as suas obrigações de curto prazo desconsiderando os seus estoques.
                                 </p>
-                                <p class="p-feedback2-negativo d-none">O indicador consta como favorável, opção
+                                <p class="p-feedback-negativo d-none">O indicador consta como favorável, opção
                                     incorreta, pois na situação descrita a empresa demostra não ter capacidade para
                                     honrar suas obrigações de curto prazo - elimidando os estoques, favorável é quando
                                     consta o resultado >1 (Liquidez Seca = (Ativo Circulante – Estoques) / Passivo
@@ -784,7 +784,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">
                                 Prazo Médio de Recebimento(PMR) =</td>
                             <td scope="col" class="col-formulas">
@@ -858,11 +858,11 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback3-positivo d-none">O indicador se mostra favorável, o ideal é que
+                                <p class="p-feedback-positivo d-none">O indicador se mostra favorável, o ideal é que
                                     quanto menor melhor esse indicador, pois indica o número de dias que a empresa leva,
                                     em média, para receber efetivamente o valor de suas vendas.
                                 </p>
-                                <p class="p-feedback3-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador se mostra incorreto, o ideal é que quanto menor melhor esse
                                     indicador, pois indica o número de dias que a empresa leva, em média, para receber
                                     efetivamente o valor de suas vendas. Clientes X 360 (dias do ano) / Vendas Brutas.
@@ -872,7 +872,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Giro do Ativo (GA) =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -945,13 +945,13 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback4-positivo d-none">
+                                <p class="p-feedback-positivo d-none">
                                     O indicador se mostra favorável, pois o giro do ativo (GA) é uma comparação de
                                     quanto a empresa vende – seja em produtos ou serviços – em relação ao total de
                                     ativos que ela possui. Quanto maior for esse número, melhor para a organização, pois
                                     isso significa que ela gera cada vez mais vendas com uma mesma base de ativos.
                                 </p>
-                                <p class="p-feedback4-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador se mostra incorreto - pois o Giro do Ativo (GA) é uma
                                     comparação de quanto a empresa vende em relação ao total dos ativos que ela possui.
                                     Quanto maior melhor para empresa - Giro do Ativo = Vendas líquidas/ Ativo total.
@@ -962,7 +962,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Retorno sobre o investimento(ROI) =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -1035,12 +1035,12 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback5-positivo d-none">
+                                <p class="p-feedback-positivo d-none">
                                     O indicador do retorno de Investimento - quanto maior é melhor para a organização ,
                                     pois o ROI tem o objetivo de traçar uma relação entre os ganhos gerados pelo
                                     investimento e o montante total investido.
                                 </p>
-                                <p class="p-feedback5-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador se mostra incorreto, pois quanto maior for o Retorno de
                                     Investimento(ROI) é melhor para a organização, pois o ROI tem o objetivo de traçar
                                     uma relação entre os ganhos gerados pelo investimento e o montante total investido.
@@ -1051,7 +1051,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Grau de endividamento =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -1124,12 +1124,12 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback6-positivo d-none">
+                                <p class="p-feedback-positivo d-none">
                                     O indicador se mostra desfavorável, o ideal é que seja inferior a 1. Quando está
                                     acima de 1 indica que a empresa está individada, que ela já não tem mais capital
                                     próprio. Ou seja, está insolvente.
                                 </p>
-                                <p class="p-feedback6-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador está incorreto, o indicador está acima de 1 indicando que a
                                     empresa está individada, que ela já não tem mais capital próprio. Ou seja, está
                                     insolvente. O ideal é que seja inferior a 1 - estando solúvel, conseguindo arcar com
@@ -1142,7 +1142,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Participação dos Capitais de Terceiros (PCT) =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -1215,12 +1215,12 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback7-positivo d-none">
+                                <p class="p-feedback-positivo d-none">
                                     O indicador se mostra favorável, o ideal é que seja inferior a 1. Quando está acima
                                     de 1 indica que a empresa está individada e depende da participação do capital de
                                     terceiros.
                                 </p>
-                                <p class="p-feedback7-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador está incorreto, está inferior a 1 o que é o ideal. Quando
                                     está acima de 1 indica que a empresa está individada e depende da participação do
                                     capital de terceiros. Participação dos Capitais de Terceiros (PCT) = Passivo
@@ -1231,7 +1231,7 @@
                                 <button class="checar-resposta">Checar resposta</button>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="disabled">
                             <td scope="col" class="estilo-coluna">Margem líquida (ML) =</td>
                             <td scope="col" class="col-formulas">
                                 <select class="estilo-selecao form-select text-wrap ">
@@ -1304,12 +1304,12 @@
                                 </select>
                             </td>
                             <td scope="col" class="col-feedback">
-                                <p class="p-feedback8-positivo d-none">
+                                <p class="p-feedback-positivo d-none">
                                     O indicador se mostra favorável, o ideal é que quanto MAIOR melhor. Esse indicador é
                                     útil para expressar a relação entre o lucro líquido da empresa e a sua receita
                                     líquida de vendas. Margem líquida (ML) = Lucro Líquido/ Vendas Líquidas.
                                 </p>
-                                <p class="p-feedback8-negativo d-none">
+                                <p class="p-feedback-negativo d-none">
                                     O resultado do indicador está incorreto, o ideal é que quanto MAIOR melhor. Esse
                                     indicador é útil para expressar a relação entre o lucro líquido da empresa e a sua
                                     receita líquida de vendas.
@@ -1321,7 +1321,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="ui-btn checar-tabelas resultado-tela-dois">Conferir resultado</button>
+                <!-- <button class="ui-btn checar-tabelas resultado-tela-dois">Conferir resultado</button> -->
             </div>
         </div>
 
